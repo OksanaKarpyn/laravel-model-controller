@@ -1,11 +1,10 @@
 @extends('layout.app')
 
 @section('titlePage')
-laravel App | About
+laravel App | Movie
 @endsection
-
 
 @section('content')
 
-<h1>hello about</h1>
+<h1>hello movie</h1>
 @endsection

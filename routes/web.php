@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use  App\Http\Controllers\Guest\MovieController as MovieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $title= 'Page home';
-    return view('pages.home', compact('title'));
-})->name('home');
+Route::get('/movie', function () {
+    $title= 'Page movie';
+    return view('pages.movie', compact('title'));
+})->name('movie');
+
+Route::get('/', [MovieController::class, 'index'])->name('home');
+
 
 Route::get('/about', function () {
     $title= 'Page About';
