@@ -6,6 +6,9 @@ laravel App | About
 
 
 @section('content')
-
-<h1>hello about</h1>
+<div class="wrapper">
+    <div class="container">
+        <h1>Hello About</h1>
+    </div>
+</div>
 @endsection

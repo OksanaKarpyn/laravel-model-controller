@@ -5,9 +5,10 @@ laravel App | Home
 @endsection
 
 @section('content')
-@foreach( $movie as $elem )
-<h2>{{ $elem['title'] }}</h2>
-@endforeach
+<div class="wrapper">
+    <div class="container">
+        <h1>Hello Home</h1>
+    </div>
+</div>
 
-<h1>hello home</h1>
 @endsection

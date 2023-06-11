@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\Guest\MovieController as MovieController;
+use  App\Http\Controllers\Guest\HomeController as HomeController;
+use  App\Http\Controllers\Guest\AboutController as AboutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +16,9 @@ use  App\Http\Controllers\Guest\MovieController as MovieController;
 |
 */
 
-Route::get('/movie', function () {
-    $title= 'Page movie';
-    return view('pages.movie', compact('title'));
-})->name('movie');
+Route::get('/', [HomeController::class,'index'])->name('home');
 
-Route::get('/', [MovieController::class, 'index'])->name('home');
+Route::get('/movie', [MovieController::class, 'index'])->name('movie');
 
 
-Route::get('/about', function () {
-    $title= 'Page About';
-    return view('pages.about', compact('title'));
-})->name('about');
+Route::get('/about', [AboutController::class, 'index'] )->name('about');

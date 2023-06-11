@@ -9,9 +9,9 @@ use App\Models\Movies;
 class MovieController extends Controller
 {
     public function index(){
-       
+        $title= 'Page movie';
         $movie= Movies::All();
        // var_dump($movie);
-   return view('pages.home', compact('movie'));
+   return view('pages.movie', compact('movie','title'));
    }
 }
